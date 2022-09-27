@@ -23,7 +23,6 @@ R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
 PAGES = DATA["query"]["pages"]
-print("PAGES",PAGES)
 for page in PAGES:
     for page_update_history in page["revisions"]:
         print("ユーザー名", page_update_history['user'])
